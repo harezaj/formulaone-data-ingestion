@@ -8,11 +8,11 @@ from collections import defaultdict
 s3_client = boto3.client("s3")
 
 # S3 bucket name
-s3_bucket = "jh-formulaone-bucket"
+s3_bucket = "your-s3-bucket-name"
 
 # Headers required for the API request
 headers = {
-    'user-agent': 'JacobHareza'
+    'user-agent': 'your-user-agent'
 }
 
 # Function to retrieve data from an API
@@ -92,8 +92,7 @@ def lambda_handler(event, context):
         current_date = datetime.now().strftime("%Y-%m-%d")
         
         # Get all session data from the API with the current date
-        #session_data = get_api_data(f"https://api.openf1.org/v1/sessions?date_start={current_date}")
-        session_data = get_api_data("https://api.openf1.org/v1/sessions?date_start=2024-07-28")
+        session_data = get_api_data(f"https://api.openf1.org/v1/sessions?date_start={current_date}")
 
         
         # Check for race sessions and get the session_key
