@@ -13,6 +13,7 @@ API Link - https://openf1.org/
    - **S3:** Stores CSV files with data.
    - **Lambda:** Extracts data from API and uploads to S3.
    - **IAM:** Manages access to AWS resources.
+   - **CloudWatch** Monitors Lambda Function. Emails user if Error occurs. 
 
 2. **Snowflake**
    - **Stage:** Defines and manages S3 Bucket.
@@ -53,17 +54,16 @@ API Link - https://openf1.org/
     - **Storage Integration:**
         - A single storage integration (`s3_formulaone`) is used to manage access to S3 buckets for multiple external stages.
 
-5. **Error Handling:**
+5. **Error Handling & Monitoring:**
     - **Error Handling:**
         - Error handling is implemented in the Lambda Function code to manage API failures or data extraction issues.
+    - **Monitoring:**
+        - CloudWatch is set up to email the user if an error occurs in the Lambda function.
 
 
 ## Future Improvements / Nice to Haves
-
-  - **Monitoring & Alerts:**  AWS CloudWatch
   - **Data Visualization:** Tableau, Looker, or Power BI
-  - **Error Tracking:**  CloudWatch Logs or Sentry. Snowflake Logs and Notifications.
-  
+
   *Note: This project was for learning purposes, and these tools are nice-to-haves but are unlikely to be implemented.*
 
 
