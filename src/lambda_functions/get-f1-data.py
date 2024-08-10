@@ -100,7 +100,7 @@ def lambda_handler(event, context):
         logger.info(f"Processing data for date: {current_date}")
 
         # Intentionally trigger an exception for testing
-        raise RuntimeError("Intentional error for testing purposes.")
+        # raise RuntimeError("Intentional error for testing purposes.")
         
         # Get all session data from the API with the current date
         session_data = get_api_data("https://api.openf1.org/v1/sessions?date_start=2024-07-28")
