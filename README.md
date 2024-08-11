@@ -64,7 +64,7 @@ API Link - https://openf1.org/
         - CloudWatch is set up to email the user if an error occurs in the Lambda function.
 
 ## Future Improvements / Nice to Haves
-  -  **Implement Terraform:**
+  -  [ ] **Implement Terraform:**
         - [x] Snowflake Objects
         - [ ] AWS Objects
   - [ ] **Data Visualization:** Tableau, Looker, or Power BI
