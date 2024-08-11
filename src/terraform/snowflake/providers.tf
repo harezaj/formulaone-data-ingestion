@@ -14,8 +14,8 @@ provider "snowflake" {
   password               = var.snowflake_password
   authenticator          = "Snowflake" 
 
-  # Optional fields
-  # region    = "us-east-2"  # Adjust if necessary
+  # Not required for my authentication method. 
+  # region    = "us-east-2"
   # role      = "your_role"
   # warehouse = "your_warehouse"
   # database  = "your_database"
