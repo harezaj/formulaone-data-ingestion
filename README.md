@@ -13,7 +13,7 @@ API Link - https://openf1.org/
    - **S3:** Stores CSV files with data.
    - **Lambda:** Extracts data from API and uploads to S3.
    - **IAM:** Manages access to AWS resources.
-   - **CloudWatch** Monitors Lambda Function. Emails user if Error occurs. 
+   - **CloudWatch:** Monitors Lambda Function. Emails user if error occurs.
 
 2. **Snowflake**
    - **Stage:** Defines and manages S3 Bucket.
@@ -21,6 +21,9 @@ API Link - https://openf1.org/
    - **Storage Integration:** Handles access to external storage.
    - **Stream:** Monitors changes in staging tables.
    - **Task:** Schedules and runs data processing jobs.
+
+3. **Terraform**
+   - **Infrastructure as Code:** Terraform is used to manage all Snowflake resources, including stages, Snowpipe, streams, and file formats. This ensures a consistent and reproducible setup for Snowflake infrastructure.
 
 ## Brief Overview
 
@@ -60,11 +63,7 @@ API Link - https://openf1.org/
     - **Monitoring:**
         - CloudWatch is set up to email the user if an error occurs in the Lambda function.
 
-
 ## Future Improvements / Nice to Haves
   - **Data Visualization:** Tableau, Looker, or Power BI
 
   *Note: This project was for learning purposes, and these tools are nice-to-haves but are unlikely to be implemented.*
-
-
-    
