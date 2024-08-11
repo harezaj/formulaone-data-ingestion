@@ -23,7 +23,8 @@ API Link - https://openf1.org/
    - **Task:** Schedules and runs data processing jobs.
 
 3. **Terraform**
-   - **Infrastructure:** Terraform is used to manage all Snowflake resources, including stages, Snowpipe, streams, and file formats. Allows a consistent and reproducible setup for Snowflake infrastructure.
+   - **Infrastructure:** Terraform is used to manage all Snowflake resources, including stages, Snowpipe, streams, and file formats.
+      - Allows a consistent and reproducible setup for Snowflake infrastructure.
 
 ## Brief Overview
 
