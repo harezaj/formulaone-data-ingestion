@@ -23,7 +23,7 @@ API Link - https://openf1.org/
    - **Task:** Schedules and runs data processing jobs.
 
 3. **Terraform**
-   - **Infrastructure as Code:** Terraform is used to manage all Snowflake resources, including stages, Snowpipe, streams, and file formats. This ensures a consistent and reproducible setup for Snowflake infrastructure.
+   - **Infrastructure:** Terraform is used to manage all Snowflake resources, including stages, Snowpipe, streams, and file formats. Allows a consistent and reproducible setup for Snowflake infrastructure.
 
 ## Brief Overview
 
@@ -64,6 +64,9 @@ API Link - https://openf1.org/
         - CloudWatch is set up to email the user if an error occurs in the Lambda function.
 
 ## Future Improvements / Nice to Haves
-  - **Data Visualization:** Tableau, Looker, or Power BI
+  -  **Implement Terraform:**
+        - [x] Snowflake Objects
+        - [ ] AWS Objects
+  - [ ] **Data Visualization:** Tableau, Looker, or Power BI
 
   *Note: This project was for learning purposes, and these tools are nice-to-haves but are unlikely to be implemented.*
