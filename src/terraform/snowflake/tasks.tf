@@ -1,8 +1,13 @@
--- Create a task to merge race details into final tables
-CREATE OR REPLACE TASK merge_racedetails_task
-WAREHOUSE = 'COMPUTE_WH'
-SCHEDULE = 'USING CRON 0 17 * * MON UTC' -- Noon EST every Monday
-AS
+# Must run SQL commands directly in Snowflake to activate Tasks
+
+
+resource "snowflake_task" "merge_racedetails_task" {
+  name              = "merge_racedetails_task"
+  database          = "formulaone_staging"  
+  schema            = "processengine"             
+  warehouse         = "COMPUTE_WH"
+  schedule          = "USING CRON 0 17 * * MON UTC" # Noon EST every Monday
+  sql_statement     = <<EOF
 BEGIN
   -- Update/Insert into drivers table
   MERGE INTO formulaone_final.drivers.driver_information AS target
@@ -51,6 +56,6 @@ BEGIN
   JOIN formulaone_final.drivers.driver_information d ON s.first_name = d.first_name AND s.last_name = d.last_name AND s.driver_number = d.driver_number
   JOIN formulaone_final.circuits.circuit_information c ON s.location = c.location AND s.circuit_short_name = c.circuit_short_name;
 END;
+EOF
+}
 
--- Resume the task to start its schedule
-ALTER TASK merge_racedetails_task RESUME;

@@ -1,0 +1,16 @@
+# Ignore Terraform variables file
+terraform.tfvars
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform plan files
+*.tfplan
+
+# Ignore Terraform module caches
+.terraform/
+
+# Ignore any local override files
+override.tf
+override.tf.json
