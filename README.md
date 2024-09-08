@@ -1,7 +1,7 @@
 # Formula One Data Ingestion Project
 
 > [!WARNING]  
-> Although this was a short project, it introduced me to new technologies and served its purpose. I am archiving this project and will use this data source in my next, more complex project.
+> This project, though short, provided valuable experience with new technologies and successfully achieved its goals. I'm now archiving it, but I plan to build upon it by using this data source in an upcoming, more complex project.
 
 ## Overview
 This project automates the ingestion, processing, and normalization of Formula One race data from the Open F1 API (api.openf1.org). The data is extracted from the API using an AWS Lambda function, stored in an S3 bucket, and then ingested into Snowflake for further normalization and storage in a final database.
